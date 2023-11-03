@@ -1,0 +1,285 @@
+  # 192.168.44.44.17 shellyswitch25-98CDAC2480C0
+- name: "Camera matrimoniale"
+  object_id: "cover.room.matrimoniale"
+  unique_id: "cover.room.matrimoniale"
+  device:
+    suggested_area: "Camera da letto"
+    identifiers: "98CDAC2480C0"
+    configuration_url: "http://192.168.44.17"
+    name: "Tapparella camera"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"  
+  command_topic: "shellies/shellyswitch25-98CDAC2480C0/roller/0/command"
+  position_topic: "shellies/shellyswitch25-98CDAC2480C0/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-98CDAC2480C0C/roller/0"
+  set_position_topic: "shellies/shellyswitch25-98CDAC2480C0/roller/0/command/pos"
+  # availability_topic: "shellies/shellyswitch25-98CDAC2480C0/online"
+  # payload_available: "true"
+  # payload_not_available: "false"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.11
+- name: "Camera Olivia"
+  object_id: "cover.room.olivia"
+  unique_id: "cover.room.olivia"
+  device:
+    suggested_area: "Camera Olivia"
+    identifiers: "E8DB84ACF62E"
+    configuration_url: "http://192.168.44.11"
+    name: "Tapparella Olivia"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-E8DB84ACF62E/roller/0/command"
+  position_topic: "shellies/shellyswitch25-E8DB84ACF62E/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-E8DB84ACF62E/roller/0"
+  set_position_topic: "shellies/shellyswitch25-E8DB84ACF62E/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.12 shellyswitch25-C45BBE5FF5AE
+- name: "Cucina parcheggio"
+  object_id: "cover.kitchen.park"
+  unique_id: "cover.kitchen.park"
+  device:
+    suggested_area: "Cucina"
+    identifiers: "C45BBE5FF5AE"
+    configuration_url: "http://192.168.44.12"
+    name: "Tapparella cucina parcheggio"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-C45BBE5FF5AE/roller/0/command"
+  position_topic: "shellies/shellyswitch25-C45BBE5FF5AE/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-C45BBE5FF5AE/roller/0"
+  set_position_topic: "shellies/shellyswitch25-C45BBE5FF5AE/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.13 shellyswitch25-98CDAC24DB3A
+- name: "Camera ragazzi"
+  object_id: "cover.room.boys"
+  unique_id: "cover.room.boys"
+  device:
+    suggested_area: "Camera ragazzi"
+    identifiers: "98CDAC24DB3A"
+    configuration_url: "http://192.168.44.13"
+    name: "Tapparella Ragazzi"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-98CDAC24DB3A/roller/0/command"
+  position_topic: "shellies/shellyswitch25-98CDAC24DB3A/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-98CDAC24DB3A/roller/0"
+  set_position_topic: "shellies/shellyswitch25-98CDAC24DB3A/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.14 shellyswitch25-C45BBE5FE6E4
+- name: "Cucina portico"
+  object_id: "cover.kitchen.porch"
+  unique_id: "cover.kitchen.porch"
+  device:
+    suggested_area: "Cucina"
+    identifiers: "C45BBE5FE6E4"
+    configuration_url: "http://192.168.44.14"
+    name: "Tapparella cucina portico"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-C45BBE5FE6E4/roller/0/command"
+  position_topic: "shellies/shellyswitch25-C45BBE5FE6E4/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-C45BBE5FE6E4/roller/0"
+  set_position_topic: "shellies/shellyswitch25-C45BBE5FE6E4/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.15 shellyswitch25-C45BBE5FC68A
+- name: "Cucina giardino"
+  object_id: "cover.kitchen.garden"
+  unique_id: "cover.kitchen.garden"
+  device:
+    suggested_area: "Cucina"
+    identifiers: "C45BBE5FC68A"
+    configuration_url: "http://192.168.44.15"
+    name: "Tapparella cucina giardino"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-C45BBE5FC68A/roller/0/command"
+  position_topic: "shellies/shellyswitch25-C45BBE5FC68A/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-C45BBE5FC68A/roller/0"
+  set_position_topic: "shellies/shellyswitch25-C45BBE5FC68A/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+  
+  # 192.168.44.44.19 shellyswitch25-98CDAC25557C
+- name: "Soggiorno orto"
+  object_id: "cover.living.room.garden"
+  unique_id: "cover.living.room.garden"
+  device:
+    suggested_area: "Soggiorno"
+    identifiers: "98CDAC25557C"
+    configuration_url: "http://192.168.44.19"
+    name: "Tapparella soggiorno orto"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-98CDAC25557C/roller/0/command"
+  position_topic: "shellies/shellyswitch25-98CDAC25557C/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-98CDAC25557C/roller/0"
+  set_position_topic: "shellies/shellyswitch25-98CDAC25557C/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.20 shellyswitch25-98CDAC2556EE
+- name: "Soggiorno portico"
+  object_id: "cover.living.room.porch"
+  unique_id: "cover.living.room.porch"
+  device:
+    suggested_area: "Soggiorno"
+    identifiers: "98CDAC2556EE"
+    configuration_url: "http://192.168.44.20"
+    name: "Tapparella soggiorno portico"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-98CDAC2556EE/roller/0/command"
+  position_topic: "shellies/shellyswitch25-98CDAC2556EE/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-98CDAC2556EE/roller/0"
+  set_position_topic: "shellies/shellyswitch25-98CDAC2556EE/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.21 shellyswitch25-98CDAC24733C
+- name: "Bagno doccia"
+  object_id: "cover.bathroom.2"
+  unique_id: "cover.bathroom.2"
+  device:
+    suggested_area: "Bagno doccia"
+    identifiers: "98CDAC24733C"
+    configuration_url: "http://192.168.44.21"
+    name: "Tapparella bagno doccia"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-98CDAC24733C/roller/0/command"
+  position_topic: "shellies/shellyswitch25-98CDAC24733C/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-98CDAC24733C/roller/0"
+  set_position_topic: "shellies/shellyswitch25-98CDAC24733C/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+  # 192.168.44.44.22 shellyswitch25-C45BBE6043FB
+- name: "Bagno vasca"
+  object_id: "cover.bathroom.1"
+  unique_id: "cover.bathroom.1"
+  device:
+    suggested_area: "Bagno vasca"
+    identifiers: "C45BBE6043FB"
+    configuration_url: "http://192.168.44.22"
+    name: "Tapparella bagno vasca"
+    manufacturer: "Allterco Robotics Ltd"
+    model: "Shelly2.5"
+  device_class: "blind"
+  command_topic: "shellies/shellyswitch25-C45BBE6043FB/roller/0/command"
+  position_topic: "shellies/shellyswitch25-C45BBE6043FB/roller/0/pos"
+  state_topic: "shellies/shellyswitch25-C45BBE6043FB/roller/0"
+  set_position_topic: "shellies/shellyswitch25-C45BBE6043FB/roller/0/command/pos"
+  retain: false
+  payload_open: "open"
+  payload_close: "close"
+  payload_stop: "stop"
+  state_opening: "open"
+  state_closing: "close"
+  state_stopped: "stop"
+  position_open: 100
+  position_closed: 0
+  optimistic: false
+  qos: 1
+
+
+  #44.18 shelly1-98CDAC1F0DD5

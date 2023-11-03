@@ -1,0 +1,121 @@
+# Load frontend themes from the themes folder
+default_config:
+
+homeassistant:
+  # auth_providers:
+  #   - type: homeassistant
+  #   - type: trusted_networks
+  #     trusted_networks:
+  #       - 192.168.2.0/24
+  #       - 131.96.253.0/24
+  # external_url: !secret external_url
+  #   # - type: legacy_api_password
+  #   #   api_password: !secret http_password
+
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  elevation: 482
+  # Name of the location where Home Assistant is running
+  name: Home
+  temperature_unit: C
+  time_zone: Europe/Rome
+  # customize: !include customize.yaml
+  # customize_glob: !include customize_glob.yaml
+  # packages: !include_dir_named packages
+  # allowlist_external_dirs:
+  #   - /config/downloads
+  #   - /tmp
+  #   - /config/downloads/camera/
+  #
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 10.0.0.200      # Add the IP address of the proxy server
+    - 172.21.0.0/24  # You may also provide the subnet mask
+    - 192.168.44.1
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+
+# Example configuration.yaml entry
+person:
+  - name: Serena
+    id: serena_schench
+
+api:
+
+alexa:
+  smart_home:
+    filter:
+      include_entities:
+        - light.shellyrgbw2_2f599b
+      include_domains:
+        - switch
+        - light
+        - cover
+      exclude_entities:
+        - switch.terrazzo
+      exclude_domains:
+        - lock
+    entity_config:
+      #light.shellyrgbw2_2f599b:
+      #    name: "Luce corridoio"
+      #    description: "La luce del corridoio"
+      #    display_categories: "LIGHT"
+      cover.cover_room_olivia:
+          name: "Tapparella camera Olivia"
+          description: "Tapparella camera Olivia"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_room_boys:
+          name: "Tapparella camera ragazzi"
+          description: "Tapparella camera ragazzi"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_room_matrimoniale:
+          name: "Tapparella camera matrimoniale"
+          description: "Tapparella camera matrimoniale"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_kitchen_garden:
+          name: "Tapparella cucina giardino"
+          description: "Tapparella cucina giardino"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_kitchen_park:
+          name: "Tapparella cucina parcheggio"
+          description: "Tapparella cucina parcheggio"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_kitchen_porch:
+          name: "Tapparella cucina portico"
+          description: "Tapparella cucina portico"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_living_room_garden:
+          name: "Tapparella salotto orto"
+          description: "Tapparella salotto orto"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_living_room_porch:
+          name: "Tapparella salotto portico"
+          description: "Tapparella salotto portico"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_bathroom_2:
+          name: "Tapparella bagno doccia"
+          description: "Tapparella bagno doccia"
+          display_categories: "EXTERIOR_BLIND"
+      cover.cover_bathroom_1:
+          name: "Tapparella bagno vasca"
+          description: "Tapparella bagno vasca"
+          display_categories: "EXTERIOR_BLIND"
+
+hacs:
+  token: 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            
+mqtt: 
+  cover:  !include mqtt_covers.yaml
+  scene:  !include mqtt_scenes.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml

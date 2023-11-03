@@ -1,0 +1,4 @@
+- name: Living Room Blue Scene
+  unique_id: living_room_blue_scene
+  command_topic: "shellies/shellyswitch25-98CDAC2480C0/roller/0/command"
+  payload_on: 'close'
