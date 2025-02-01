@@ -92,6 +92,10 @@ alexa:
           name: "Tapparella bagno vasca"
           description: "Tapparella bagno vasca"
           display_categories: "EXTERIOR_BLIND"
+      switch.switch_kitchen_vacuum:
+          name: "Aspiratore cucina"
+          description: "Aspitatore"
+          display_categories: "FAN"
 mqtt:
   cover:  !include mqtt_covers.yaml
   scene:  !include mqtt_scenes.yaml
