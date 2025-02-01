@@ -96,7 +96,8 @@ mqtt:
   cover:  !include mqtt_covers.yaml
   scene:  !include mqtt_scenes.yaml
   switch: !include mqtt_switches.yaml
-  light:  !include mqtt_lights.yaml
+  # light:  !include mqtt_lights.yaml
+  sensor: !include mqtt_sensors.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml

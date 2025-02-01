@@ -1,9 +1,15 @@
-
-
-- name: "Interruttore"
-  state_topic: "shellies/shellyplus1-kitchenvacuum/relay/0"
-  command_topic: "shellies/shellyplus1-kitchenvacuum/relay/0/command"
-  availability_topic: "shellies/shellyplus1-kitchenvacuum/online"
+- name: "Switch"
+  command_topic: kitchenvacuum/command/switch:0
+  payload_on: 'on'
+  payload_off: 'off'
+  state_topic: "kitchenvacuum/status/switch:0"
+  value_template: "{{ value_json.output }}"
+  state_on: true
+  state_off: false
+  availability_topic: "kitchenvacuum/online"
+  payload_available: 'true'
+  payload_not_available: 'false'
+  optimistic: false
   device:
     suggested_area: "Cucina"
     identifiers: "78EE4CD68214"
@@ -11,11 +17,4 @@
     name: "Aspiratore cucina"
     manufacturer: "Allterco Robotics Ltd"
     model: "Shelly1Plus"
-  qos: 1
-  value_template: "{% if value == 'on' %} on {% else %} off {% endif %}" 
-  payload_on: "on"
-  payload_off: "off"
-  payload_available: "true"
-  payload_not_available: "false"
-  optimistic: false
-  retain: false
+  
