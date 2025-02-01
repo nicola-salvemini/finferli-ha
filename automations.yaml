@@ -11,51 +11,45 @@
   id: a4b76332aa0141d795054968bd6d3ac0
 - id: 4aa351e701d9ffe89fddddcccd1ad173
   alias: Chiudi tapparelle zona notte
-  trigger:
-  - platform: sun
-    event: sunset
+  triggers:
+  - event: sunset
     offset: 0
-  condition: []
-  action:
-  - service: notify.alexa_media
+    trigger: sun
+  conditions: []
+  actions:
+  - action: notify.alexa_media_alexa_cucina
+    metadata: {}
     data:
-      target: media_player.alexa_cucina
-      data:
-        type: announce
-        method: spoken
-      message: Sta diventando buio! Chiudo le tapparelle della zona notte
-  - service: notify.alexa_media
+      message: Sta diventando buio, abbasso le tapparelle della zona notte
+  - action: notify.alexa_media_alexa_camera
+    metadata: {}
     data:
-      target: media_player.alexa_camera
-      data:
-        type: announce
-        method: spoken
-      message: Sta diventando buio! Chiudo le tapparelle della zona notte
+      message: Sta diventando buio, abbasso le tapparelle della zona notte
   - delay:
       hours: 0
       minutes: 0
       seconds: 10
       milliseconds: 0
-  - service: mqtt.publish
-    data:
+  - data:
       payload: 0
       topic: shellies/shellyswitch25-98CDAC2480C0/roller/0/command/pos
-  - service: mqtt.publish
-    data:
+    action: mqtt.publish
+  - data:
       payload: 0
       topic: shellies/shellyswitch25-E8DB84ACF62E/roller/0/command/pos
-  - service: mqtt.publish
-    data:
+    action: mqtt.publish
+  - data:
       payload: 0
       topic: shellies/shellyswitch25-98CDAC24DB3A/roller/0/command/pos
-  - service: mqtt.publish
-    data:
+    action: mqtt.publish
+  - data:
       payload: 0
       topic: shellies/shellyswitch25-98CDAC24733C/roller/0/command/pos
-  - service: mqtt.publish
-    data:
+    action: mqtt.publish
+  - data:
       payload: 0
       topic: shellies/shellyswitch25-C45BBE6043FB/roller/0/command/pos
+    action: mqtt.publish
 - id: c402343cbee30e4d5c0b9d6fbdb886e1
   alias: Chiudi tapparelle zona giorno
   trigger:
@@ -99,19 +93,19 @@
       topic: shellies/shellyswitch25-98CDAC2480C0/roller/0/command/pos
   - service: mqtt.publish
     data:
-      payload: '81'
       topic: shellies/shellyswitch25-E8DB84ACF62E/roller/0/command/pos
+      payload: '13'
   - service: mqtt.publish
     data:
       payload: '0'
       topic: shellies/shellyswitch25-98CDAC24DB3A/roller/0/command/pos
   - service: mqtt.publish
     data:
-      payload: '82'
+      payload: '12'
       topic: shellies/shellyswitch25-C45BBE6043FB/roller/0/command/pos
   - service: mqtt.publish
     data:
-      payload: '82'
+      payload: '16'
       topic: shellies/shellyswitch25-98CDAC24733C/roller/0/command/pos
   - service: mqtt.publish
     data:
@@ -131,5 +125,55 @@
       topic: shellies/shellyswitch25-C45BBE5FF5AE/roller/0/command/pos
   - service: mqtt.publish
     data:
-      payload: '100'
       topic: shellies/shellyswitch25-C45BBE5FC68A/roller/0/command/pos
+      payload: '78'
+- id: '1723460232183'
+  alias: Apri per aria
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: 01:30:00
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      payload: '0'
+      topic: shellies/shellyswitch25-98CDAC2480C0/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '13'
+      topic: shellies/shellyswitch25-E8DB84ACF62E/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '0'
+      topic: shellies/shellyswitch25-98CDAC24DB3A/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '12'
+      topic: shellies/shellyswitch25-C45BBE6043FB/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '16'
+      topic: shellies/shellyswitch25-98CDAC24733C/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '65'
+      topic: shellies/shellyswitch25-98CDAC25557C/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '0'
+      topic: shellies/shellyswitch25-98CDAC2556EE/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '0'
+      topic: shellies/shellyswitch25-C45BBE5FE6E4/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      payload: '78'
+      topic: shellies/shellyswitch25-C45BBE5FF5AE/roller/0/command/pos
+  - service: mqtt.publish
+    data:
+      topic: shellies/shellyswitch25-C45BBE5FC68A/roller/0/command/pos
+      payload: '78'
+  mode: single

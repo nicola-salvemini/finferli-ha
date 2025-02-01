@@ -2,15 +2,7 @@
 default_config:
 
 homeassistant:
-  # auth_providers:
-  #   - type: homeassistant
-  #   - type: trusted_networks
-  #     trusted_networks:
-  #       - 192.168.2.0/24
-  #       - 131.96.253.0/24
-  # external_url: !secret external_url
-  #   # - type: legacy_api_password
-  #   #   api_password: !secret http_password
+
 
   # Location required to calculate the time the sun rises and sets
   latitude: !secret latitude_home
@@ -44,12 +36,6 @@ frontend:
 tts:
   - platform: google_translate
 
-
-# Example configuration.yaml entry
-person:
-  - name: Serena
-    id: serena_schench
-
 api:
 
 alexa:
@@ -66,10 +52,6 @@ alexa:
       exclude_domains:
         - lock
     entity_config:
-      #light.shellyrgbw2_2f599b:
-      #    name: "Luce corridoio"
-      #    description: "La luce del corridoio"
-      #    display_categories: "LIGHT"
       cover.cover_room_olivia:
           name: "Tapparella camera Olivia"
           description: "Tapparella camera Olivia"
@@ -110,10 +92,7 @@ alexa:
           name: "Tapparella bagno vasca"
           description: "Tapparella bagno vasca"
           display_categories: "EXTERIOR_BLIND"
-
-hacs:
-  token: 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            
-mqtt: 
+mqtt:
   cover:  !include mqtt_covers.yaml
   scene:  !include mqtt_scenes.yaml
 automation: !include automations.yaml

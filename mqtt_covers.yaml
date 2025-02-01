@@ -1,4 +1,4 @@
-  # 192.168.44.44.17 shellyswitch25-98CDAC2480C0
+ # 192.168.44.44.17 shellyswitch25-98CDAC2480C0
 - name: "Camera matrimoniale"
   object_id: "cover.room.matrimoniale"
   unique_id: "cover.room.matrimoniale"
@@ -9,7 +9,7 @@
     name: "Tapparella camera"
     manufacturer: "Allterco Robotics Ltd"
     model: "Shelly2.5"
-  device_class: "blind"  
+  device_class: "blind"
   command_topic: "shellies/shellyswitch25-98CDAC2480C0/roller/0/command"
   position_topic: "shellies/shellyswitch25-98CDAC2480C0/roller/0/pos"
   state_topic: "shellies/shellyswitch25-98CDAC2480C0C/roller/0"
@@ -168,7 +168,7 @@
   position_closed: 0
   optimistic: false
   qos: 1
-  
+
   # 192.168.44.44.19 shellyswitch25-98CDAC25557C
 - name: "Soggiorno orto"
   object_id: "cover.living.room.garden"
