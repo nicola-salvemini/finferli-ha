@@ -2,7 +2,7 @@ sensor:
   - name: "Shelly EM Assorbimento"
     state: '{{ (states("sensor.shelly_em_assorbimento_zona_giorno")|float(default=0) + states("sensor.shelly_em_assorbimento_zona_notte")|float(default=0) + states("sensor.shelly_em_assorbimento_lavanderia")|float(default=0) )|float|round(1) }}'
     unit_of_measurement : "Watt"
-    state_class: SensorStateClass.MEASUREMENT
+    state_class: measurement
     # icon: mdi:speedometer
 
 # - platform: template
