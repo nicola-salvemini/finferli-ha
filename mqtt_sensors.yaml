@@ -1,24 +1,17 @@
 # https://indomus.it/guide/integrare-shelly-em-a-home-assistant-via-mqtt/#nomemqtt
-- name: "Shelly EM Assorbimento ch1"
+## Assorbimento
+- name: "Shelly EM Assorbimento Zona Giorno"
   state_topic: "shellies/power_meter/emeter/0/power"
   value_template: "{{ value }}"
   unit_of_measurement : "Watt"
   icon: mdi:speedometer
-- name: "Shelly EM Assorbimento ch2"
+- name: "Shelly EM Assorbimento Zona Notte"
   state_topic: "shellies/power_meter/emeter/1/power"
   value_template: "{{ value }}"
   unit_of_measurement : "Watt"
   icon: mdi:speedometer
-- name: "Shelly EM Assorbimento ch3"
+- name: "Shelly EM Assorbimento Lavanderia"
   state_topic: "shellies/power_meter/emeter/1/power"
   value_template: "{{ value }}"
   unit_of_measurement : "Watt"
   icon: mdi:speedometer
-
-# - platform: template
-#     sensors:
-#       shelly_em_assorbimento:
-#         friendly_name: "Shelly EM Assorbimento"
-#         value_template: '{{ (states("sensor.shelly_em_assorbimento_ch1")|float(default=0) + states("sensor.shelly_em_assorbimento_ch2")|float(default=0) + states("sensor.shelly_em_assorbimento_ch3")|float(default=0) )|float|round(1) }}'
-#         unit_of_measurement : "Watt"
-#         icon: mdi:speedometer

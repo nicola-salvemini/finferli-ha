@@ -1,0 +1,37 @@
+- platform: template
+  sensors:
+    shelly_em_assorbimento:
+      friendly_name: "Shelly EM Assorbimento"
+      value_template: '{{ (states("sensor.shelly_em_assorbimento_zona_giorno")|float(default=0) + states("sensor.shelly_em_assorbimento_zona_notte")|float(default=0) + states("sensor.shelly_em_assorbimento_lavanderia")|float(default=0) )|float|round(1) }}'
+      unit_of_measurement : "Watt"
+      icon: mdi:speedometer
+
+# Consumo
+
+- platform: integration
+  source: sensor.shelly_em_assorbimento_zona_giorno
+  name: "Shelly EM Consumo Zona Giorno"
+  unit_prefix: k
+  round: 2
+
+- platform: integration
+  source: sensor.shelly_em_assorbimento_zona_notte
+  name: "Shelly EM Consumo Zona Notte"
+  unit_prefix: k
+  round: 2
+
+- platform: integration
+  source: sensor.shelly_em_assorbimento_lavanderia
+  name: "Shelly EM Consumo Lavanderia"
+  unit_prefix: k
+  round: 2
+
+- platform: template
+  sensors:
+    shelly_em_consumo:
+      friendly_name: "Shelly EM Consumo"
+      value_template: '{{ (states("sensor.shelly_em_consumo_zona_giorno")|float(default=0) + states("sensor.shelly_em_consumo_zona_notte")|float(default=0) + states("sensor.shelly_em_consumo_lavanderia")|float(default=0))|float|round(1) }}'
+      unit_of_measurement : "Watt"
+      icon_template: mdi:speedometer
+
+      

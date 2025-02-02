@@ -106,3 +106,5 @@ mqtt:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+sensor: !include sensors.yaml
+utility_meter: !include utility_meters.yaml

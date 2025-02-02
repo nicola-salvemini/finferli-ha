@@ -1,0 +1,11 @@
+shelly_em_consumo_giornaliero:
+    source: sensor.shelly_em_consumo
+    cycle: daily
+
+shelly_em_consumo_mensile:
+    source: sensor.shelly_em_consumo
+    cycle: monthly
+
+shelly_em_consumo_annuale:
+    source: sensor.shelly_em_consumo
+    cycle: yearly
