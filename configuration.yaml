@@ -43,6 +43,7 @@ alexa:
     filter:
       include_entities:
         - light.shellyrgbw2_2f599b
+        - switch.switch_kitchen_vacuum
       include_domains:
         - switch
         - light
