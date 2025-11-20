@@ -1,4 +1,5 @@
 # 192.168.44.44.17 shellyswitch25-98CDAC2480C0
+# A test
 - name: "Camera matrimoniale"
   default_entity_id: "cover.room.matrimoniale"
   unique_id: "cover.room.matrimoniale"
