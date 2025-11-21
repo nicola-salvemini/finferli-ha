@@ -17,12 +17,11 @@
     trigger: sun
   conditions: []
   actions:
-  - action: notify.alexa_media_alexa_cucina
-    metadata: {}
-    data:
-      message: Sta diventando buio, abbasso le tapparelle della zona notte
-  - action: notify.alexa_media_alexa_camera
-    metadata: {}
+  - action: notify.send_message
+    target:
+      entity_id:
+        - notify.alexa_cucina_parla
+        - notify.alexa_camera_parla
     data:
       message: Sta diventando buio, abbasso le tapparelle della zona notte
   - delay:
