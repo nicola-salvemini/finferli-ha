@@ -11,7 +11,12 @@
   unit_of_measurement : "Watt"
   icon: mdi:speedometer
 - name: "Shelly EM Assorbimento Lavanderia"
-  state_topic: "shellies/power_meter/emeter/1/power"
+  state_topic: "shellies/power_meter/emeter/2/power"
   value_template: "{{ value }}"
   unit_of_measurement : "Watt"
   icon: mdi:speedometer
+
+    #- name: "Apertura porta garage esterno"
+    #state_topic: "zigbee2mqtt/porta_garage_interno"
+    #availability_topic: "zigbee2mqtt/bridge/state"
+    #device_class: "door"

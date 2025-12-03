@@ -1,5 +1,5 @@
 - name: "Switch"
-  object_id: "switch.kitchen.vacuum"
+  default_entity_id: "switch.kitchen.vacuum"
   unique_id: "switch.kitchen.vacuum"
   command_topic: kitchenvacuum/command/switch:0
   payload_on: 'on'

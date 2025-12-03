@@ -1,6 +1,6 @@
 # 192.168.44.44.17 shellyswitch25-98CDAC2480C0
 - name: "Camera matrimoniale"
-  object_id: "cover.room.matrimoniale"
+  default_entity_id: "cover.room.matrimoniale"
   unique_id: "cover.room.matrimoniale"
   device:
     suggested_area: "Camera da letto"
@@ -31,7 +31,7 @@
 
   # 192.168.44.11
 - name: "Camera Olivia"
-  object_id: "cover.room.olivia"
+  default_entity_id: "cover.room.olivia"
   unique_id: "cover.room.olivia"
   device:
     suggested_area: "Camera Olivia"
@@ -59,7 +59,7 @@
 
   # 192.168.44.44.12 shellyswitch25-C45BBE5FF5AE
 - name: "Cucina parcheggio"
-  object_id: "cover.kitchen.park"
+  default_entity_id: "cover.kitchen.park"
   unique_id: "cover.kitchen.park"
   device:
     suggested_area: "Cucina"
@@ -87,7 +87,7 @@
 
   # 192.168.44.44.13 shellyswitch25-98CDAC24DB3A
 - name: "Camera ragazzi"
-  object_id: "cover.room.boys"
+  default_entity_id: "cover.room.boys"
   unique_id: "cover.room.boys"
   device:
     suggested_area: "Camera ragazzi"
@@ -115,7 +115,7 @@
 
   # 192.168.44.44.14 shellyswitch25-C45BBE5FE6E4
 - name: "Cucina portico"
-  object_id: "cover.kitchen.porch"
+  default_entity_id: "cover.kitchen.porch"
   unique_id: "cover.kitchen.porch"
   device:
     suggested_area: "Cucina"
@@ -143,7 +143,7 @@
 
   # 192.168.44.44.15 shellyswitch25-C45BBE5FC68A
 - name: "Cucina giardino"
-  object_id: "cover.kitchen.garden"
+  default_entity_id: "cover.kitchen.garden"
   unique_id: "cover.kitchen.garden"
   device:
     suggested_area: "Cucina"
@@ -171,7 +171,7 @@
 
   # 192.168.44.44.19 shellyswitch25-98CDAC25557C
 - name: "Soggiorno orto"
-  object_id: "cover.living.room.garden"
+  default_entity_id: "cover.living.room.garden"
   unique_id: "cover.living.room.garden"
   device:
     suggested_area: "Soggiorno"
@@ -199,7 +199,7 @@
 
   # 192.168.44.44.20 shellyswitch25-98CDAC2556EE
 - name: "Soggiorno portico"
-  object_id: "cover.living.room.porch"
+  default_entity_id: "cover.living.room.porch"
   unique_id: "cover.living.room.porch"
   device:
     suggested_area: "Soggiorno"
@@ -227,7 +227,7 @@
 
   # 192.168.44.44.21 shellyswitch25-98CDAC24733C
 - name: "Bagno doccia"
-  object_id: "cover.bathroom.2"
+  default_entity_id: "cover.bathroom.2"
   unique_id: "cover.bathroom.2"
   device:
     suggested_area: "Bagno doccia"
@@ -255,7 +255,7 @@
 
   # 192.168.44.44.22 shellyswitch25-C45BBE6043FB
 - name: "Bagno vasca"
-  object_id: "cover.bathroom.1"
+  default_entity_id: "cover.bathroom.1"
   unique_id: "cover.bathroom.1"
   device:
     suggested_area: "Bagno vasca"
